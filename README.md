@@ -90,6 +90,9 @@ Go to http://127.0.0.1:8000/ to begin.
 
 ## Features
 
+- Post an article
+- Share a post via email
+- Recommend similar posts
 -
 
 ## Deployment
