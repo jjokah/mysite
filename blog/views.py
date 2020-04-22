@@ -130,6 +130,18 @@ def post_search(request):
             # results = Post.published.annotate(
             #     similarity=TrigramSimilarity('title', query),
             # ).filter(similarity__gt=0.1).order_by('-similarity')
+
+            # Trying to combine both search types and display result
+            # result1 = Post.published.annotate(
+            #     search=search_vector,
+            #     rank=SearchRank(search_vector, search_query)
+            # ).filter(rank__gte=0.3)
+            # result2 = Post.published.annotate(
+            #     similarity=TrigramSimilarity('title', query),
+            # ).filter(similarity__gt=0.1).order_by('-similarity')
+            # results = result1 | result2
+            # results = results.order_by('-rank')
+            # Logical error: result2 may not displaying
     return render(request,
                   'blog/post/search.html',
                   {'form': form,
