@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
 
+    'django_comments',
+    'mptt',
+    'tagging',
     'taggit',
+    'zinnia',
 
     'blog.apps.BlogConfig',
 ]
@@ -71,6 +75,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'django.template.context_processors.i18n',
+                'zinnia.context_processors.version',  # Optional
             ],
         },
     },
