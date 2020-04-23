@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import dj_database_url
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -152,6 +153,7 @@ EMAIL_HOST_PASSWORD = 'your_account_password'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+<<<<<<< HEAD
 
 # Heroku: Update database configuration from $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
@@ -169,3 +171,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
+=======
+django_heroku.settings(locals())
+>>>>>>> eb98ffd370fbb47197c779d603dab61a417c81e6
