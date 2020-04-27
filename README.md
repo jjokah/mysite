@@ -58,7 +58,7 @@ To get a development env running:
 > clone this repo to your local machine
 
 ```
-git clone https://github.com/JohnJohnsonOkah/blog-site.git
+git clone https://github.com/JohnJohnsonOkah/mysite.git
 ```
 
 > install requirements
