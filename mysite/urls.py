@@ -6,15 +6,16 @@ from django.urls import path, include
 from blog.sitemaps import PostSitemap
 
 sitemaps = {
-    'posts': PostSitemap,
+    "posts": PostSitemap,
 }
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls', namespace='blog')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
-         name='django.contrib.sitemaps.views.sitemap'),
-
-    url(r'^weblog/', include('zinnia.urls')),
-    url(r'^comments/', include('django_comments.urls')),
+    path("admin/", admin.site.urls),
+    path("blog/", include("blog.urls", namespace="blog")),
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
 ]
